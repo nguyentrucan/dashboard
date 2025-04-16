@@ -55,7 +55,7 @@ const Orders = () => {
                   <Link>View</Link>
                 </div>
                 <div
-                  onClick={(e) => setShow(!show)}
+                  onClick={() => setShow(!show)}
                   className="py-3 w-[8%] font-medium"
                 >
                   <LuSquareArrowDown />
@@ -98,7 +98,7 @@ const Orders = () => {
                   <Link>View</Link>
                 </div>
                 <div
-                  onClick={(e) => setShow(!show)}
+                  onClick={() => setShow(!show)}
                   className="py-3 w-[8%] font-medium"
                 >
                   <LuSquareArrowDown />
@@ -141,7 +141,7 @@ const Orders = () => {
                   <Link>View</Link>
                 </div>
                 <div
-                  onClick={(e) => setShow(!show)}
+                  onClick={() => setShow(!show)}
                   className="py-3 w-[8%] font-medium"
                 >
                   <LuSquareArrowDown />
@@ -184,7 +184,7 @@ const Orders = () => {
                   <Link>View</Link>
                 </div>
                 <div
-                  onClick={(e) => setShow(!show)}
+                  onClick={() => setShow(!show)}
                   className="py-3 w-[8%] font-medium"
                 >
                   <LuSquareArrowDown />
