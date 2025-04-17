@@ -1,8 +1,11 @@
-import Category from '../../views/admin/Category';
-import Orders from '../../views/admin/Orders';
-import PaymentRequest from '../../views/admin/PaymentRequest';
-import Sellers from '../../views/admin/Sellers';
-import AdminDashboard from './../../views/admin/AdminDashboard';
+import Category from "../../views/admin/Category";
+import DeactiveSellers from "../../views/admin/DeactiveSellers";
+import Orders from "../../views/admin/Orders";
+import PaymentRequest from "../../views/admin/PaymentRequest";
+import SellerDetails from "../../views/admin/SellerDetails";
+import SellerRequest from "../../views/admin/SellerRequest";
+import Sellers from "../../views/admin/Sellers";
+import AdminDashboard from "./../../views/admin/AdminDashboard";
 
 export const adminRoutes = [
   {
@@ -28,6 +31,21 @@ export const adminRoutes = [
   {
     path: "admin/dashboard/payment-request",
     element: <PaymentRequest />,
+    role: "admin",
+  },
+  {
+    path: "admin/dashboard/deactive-sellers",
+    element: <DeactiveSellers />,
+    role: "admin",
+  },
+  {
+    path: "admin/dashboard/sellers-request",
+    element: <SellerRequest />,
+    role: "admin",
+  },
+  {
+    path: "admin/dashboard/seller/details/:sellerId",
+    element: <SellerDetails />,
     role: "admin",
   },
 ];
