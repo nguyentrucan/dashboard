@@ -1,9 +1,15 @@
-import Home from './../../views/Home';
+import SellerDashboard from "../../views/seller/SellerDashboard";
+import Home from "./../../views/Home";
 
 export const sellerRoutes = [
   {
     path: "/",
     element: <Home />,
     ability: ["admin", "seller"],
+  },
+  {
+    path: "/seller/dashboard",
+    element: <SellerDashboard />,
+    ability: ["seller"],
   },
 ];
