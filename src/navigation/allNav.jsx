@@ -116,6 +116,6 @@ export const allNav = [
     title: "Chat-Support",
     icon: <AiOutlineDashboard />,
     role: "seller",
-    path: "/seller/chat-support",
+    path: "/seller/dashboard/chat-support",
   },
 ];
