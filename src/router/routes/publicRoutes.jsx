@@ -1,8 +1,13 @@
 import Login from "./../../views/auth/Login";
 import Register from "./../../views/auth/Register";
 import AdminLogin from "./../../views/auth/AdminLogin";
+import Home from './../../views/Home';
 
 const publicRoutes = [
+  {
+    path: "/",
+    element: <Home />,
+  },
   {
     path: "/login",
     element: <Login />,

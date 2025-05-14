@@ -9,14 +9,8 @@ import Profile from "../../views/seller/Profile";
 import SellerDashboard from "../../views/seller/SellerDashboard";
 import SellerToAdmin from "../../views/seller/SellerToAdmin";
 import SellerToCustomer from "../../views/seller/SellerToCustomer";
-import Home from "./../../views/Home";
 
 export const sellerRoutes = [
-  {
-    path: "/",
-    element: <Home />,
-    ability: ["admin", "seller"],
-  },
   {
     path: "/seller/dashboard",
     element: <SellerDashboard />,

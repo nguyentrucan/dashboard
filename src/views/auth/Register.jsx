@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { FaFacebook, FaGoogle } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { PropagateLoader } from "react-spinners";
 import { overrideStyle } from "../../utils/utils";
 import {
@@ -12,6 +12,8 @@ import toast from "react-hot-toast";
 
 const Register = () => {
   const dispatch = useDispatch();
+
+  const navigate = useNavigate();
 
   const { loader, successMessage, errorMessage } = useSelector(
     (state) => state.auth
@@ -43,6 +45,7 @@ const Register = () => {
     if (successMessage) {
       toast.success(successMessage);
       dispatch(messageClear());
+      navigate("/");
     }
   }, [successMessage, errorMessage]);
 
