@@ -135,7 +135,7 @@ export const authReducer = createSlice({
       })
       .addCase(get_user_info.fulfilled, (state, { payload }) => {
         state.loader = false;
-        state.userInfo = payload.message;
+        state.userInfo = payload.userInfo;
       });
   },
 });
