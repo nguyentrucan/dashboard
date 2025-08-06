@@ -16,7 +16,7 @@ export const addProduct = createAsyncThunk(
   }
 );
 
-export const getProduct = createAsyncThunk(
+export const getProducts = createAsyncThunk(
   "product/getProduct",
   async (
     { parPage, page, searchValue },
@@ -24,7 +24,7 @@ export const getProduct = createAsyncThunk(
   ) => {
     try {
       const { data } = await api.get(
-        `/get-product?page=${page}&&searchValue=${searchValue}&&parPage=${parPage}`,
+        `/get-products?page=${page}&&searchValue=${searchValue}&&parPage=${parPage}`,
         {
           withCredentials: true,
         }
@@ -43,7 +43,7 @@ export const productReducer = createSlice({
     errorMessage: "",
     loader: false,
     products: [],
-    totalProduct: 0,
+    totalProducts: 0,
   },
   reducers: {
     messageClear: (state) => {
@@ -64,18 +64,18 @@ export const productReducer = createSlice({
         state.successMessage = payload.message;
         state.products = [...state.products, payload.product];
       })
-      .addCase(getProduct.pending, (state) => {
+      .addCase(getProducts.pending, (state) => {
         state.loader = true;
       })
-      .addCase(getProduct.rejected, (state, { payload }) => {
+      .addCase(getProducts.rejected, (state, { payload }) => {
         state.loader = false;
         state.errorMessage = payload.error;
       })
-      .addCase(getProduct.fulfilled, (state, { payload }) => {
+      .addCase(getProducts.fulfilled, (state, { payload }) => {
         state.loader = false;
         state.successMessage = payload.message;
         state.products = payload.products;
-        state.totalProduct = payload.totalProduct;
+        state.totalProducts = payload.totalProducts;
       });
   },
 });

@@ -32,7 +32,7 @@ const Sidebar = ({ showSidebar, setShowSidebar }) => {
           <Link to="/" className="w-[180px] h-[50px]">
             <img
               className="w-full h-full"
-              src="http://localhost:5173/images/logo.png"
+              src="/images/logo.png"
               alt=""
             />
           </Link>
